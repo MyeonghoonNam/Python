@@ -53,7 +53,7 @@ print('f' not in str_o4) # 문자열에 특정 문자 포함 여부, 미포함 �
 # print(77 + 'a') -> 문자형과 숫자형은 연산 불가
 a1 = 88
 b1 = "b"
-print(str(str1) + b1)
+print(str(a1) + b1)
 
 # 문자열 함수
 # 참고 : https://www.w3schools.com/python/python_ref_string.asp
@@ -66,6 +66,7 @@ print(b.capitalize()) # 문자열의 첫 글자만 대문자 변환
 print(a.replace('Nice', "Good"))
 print(list(reversed(b))) # 리스트형의 요소들을 반대순서로 반환한다.
 
+# 슬라이싱
 print(a[0:3])
 print(a[:])
 print(a[0:len(a)])
