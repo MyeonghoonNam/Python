@@ -17,6 +17,9 @@ print(dir(f))
 
 f.close() # open 후 반드시 자원 반환
 
+print("---------------------")
+print("---------------------")
+
 # 에제 2
 # with문이 끝나면 자동으로 리소스 반환
 # 예제 1 코드와 같다
@@ -24,6 +27,7 @@ with open('D:/코딩/Python/python_basic/resource/review.txt', 'r') as f:
   c = f.read()
   print(c)
   print(iter(c))
+  print(list(c))
 
 print("---------------------")
 print("---------------------")
@@ -53,6 +57,7 @@ print("---------------------")
 
 # 예제 4
 with open('D:/코딩/Python/python_basic/resource/review.txt', 'r') as f:
+  print("readline")
   line = f.readline()
 
   while line:
@@ -78,10 +83,11 @@ print("---------------------")
 score = []
 with open('D:/코딩/Python/python_basic/resource/score.txt', 'r') as f:
   for line in f :
+    
     score.append(int(line)) # txt 파일에 저장된 내용은 무조건 문자열로 취급
   print(score)
 
-print('Averae : {:5.3}'.format(sum(score)/len(score)))
+print('Averae : {:6.3}'.format(sum(score)/len(score)))
 
 # 파일 쓰기
 # 예제 1

@@ -26,9 +26,9 @@ print('Cursor Type : ', type(c))
 c.execute("CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, username text, email text, phone text, website text, regdate text)")
 
 # 데이터 삽입
-# c.execute("INSERT INTO users VALUES (1 ,'Kim','Kim@naver.com', '010-0000-0000', 'Kim.com', ?)", (nowDatetime,))
+c.execute("INSERT INTO users VALUES (1 ,'Kim','Kim@naver.com', '010-0000-0000', 'Kim.com', ?)", (nowDatetime,))
 
-# c.execute("INSERT INTO users(id, username, email, phone, website, regdate) VALUES (?, ?, ?, ?, ?, ?)", (2, 'Park', 'Park@naver.com', '010-1111-1111', 'Park.com', nowDatetime))
+c.execute("INSERT INTO users(id, username, email, phone, website, regdate) VALUES (?, ?, ?, ?, ?, ?)", (2, 'Park', 'Park@naver.com', '010-1111-1111', 'Park.com', nowDatetime))
 
 # Many 삽입(튜플, 리스트)
 userList = (

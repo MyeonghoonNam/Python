@@ -9,8 +9,11 @@ import csv
 # 예제 1
 with open('D:/코딩/Python/python_basic/resource/sample1.csv', 'r') as f:
   reader = csv.reader(f)
+  
   next(reader) # Header 스킵(하나의 행 스킵)
   print(reader)
+  print(type(reader))
+  print(dir(reader))
 
   for c in reader:
     print(c)
@@ -29,10 +32,11 @@ with open('D:/코딩/Python/python_basic/resource/sample2.csv', 'r') as f:
 print("-----------------------------------------")
 print("-----------------------------------------")
 
-# 예제 3
+# 예제 3 (Dict 변환)
 with open('D:/코딩/Python/python_basic/resource/sample1.csv', 'r') as f:
   reader = csv.DictReader(f)
-
+  print(type(reader))
+  
   for c in reader :
     for k, v in c.items():
       print(k, v)
