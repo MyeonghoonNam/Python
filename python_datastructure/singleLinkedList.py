@@ -17,8 +17,18 @@ class SingleLinkedList :
     else:
       self.tail.next = current_node
       self.tail = current_node
-      
-  def search(self) :
+  
+  def search_one(self, data):
+    curNode = self.head
+    
+    while curNode:
+      if curNode.data == data:
+        print("find data :", data)
+        return 
+      else :
+        curNode = curNode.next
+
+  def search_all(self) :
     current_node = self.head
 
     while current_node :
@@ -40,16 +50,16 @@ class SingleLinkedList :
 
           if node.next == None:
             self.tail = node
-
           return
         else:
           node = node.next
+
+      return print("해당 값이 존재하지 않습니다.")
 
 
 test_list = SingleLinkedList()
 test_list.append(3)
 test_list.append(6)
 test_list.append(9)
-test_list.delete(3)
-test_list.search()
-print(test_list.tail.data)
+test_list.search_all()
+test_list.search_one(6)
